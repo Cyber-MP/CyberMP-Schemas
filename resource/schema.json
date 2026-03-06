@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Resource Configuration",
+  "type": "object",
+  "properties": {
+    "client_script": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ],
+      "description": "Path to client-side script(s)."
+    },
+    "server_script": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ],
+      "description": "Path to server-side script(s)."
+    },
+    "shared_script": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ],
+      "description": "Path to scripts shared by both client and server."
+    },
+    "ui_page": {
+      "type": "string",
+      "description": "The main entry point for the UI/CEF."
+    },
+    "file": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ],
+      "description": "Additional files to be included in the resource."
+    },
+    "use_game_natives": {
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ],
+      "description": "Note: This is a string 'true'/'false' based on your TOML."
+    }
+  },
+  "additionalProperties": true
+}
