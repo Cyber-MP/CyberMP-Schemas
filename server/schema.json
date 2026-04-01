@@ -40,6 +40,79 @@
     "secret_token": {
       "type": "string",
       "description": "Servers's private token that is used to identify servers in server list"
+    },
+    "core": {
+      "type": "object",
+      "description": "Core gameplay and engine configurations.",
+      "properties": {
+        "nametags": {
+          "type": "boolean"
+        },
+        "disable_switch_seats": {
+          "type": "boolean"
+        },
+        "delete_map_objects": {
+          "type": "boolean"
+        },
+        "default_gameplay_restrictions": {
+          "type": "boolean"
+        },
+        "disable_drop_points": {
+          "type": "boolean"
+        },
+        "disable_location_dependent_quests": {
+          "type": "boolean"
+        },
+        "disable_garage": {
+          "type": "boolean"
+        },
+        "files": {
+          "type": "array",
+          "description": "List of archive and script files to load.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "overrides": {
+          "type": "object",
+          "description": "Specific logic and world overrides.",
+          "properties": {
+            "change_player_on_death_logic": {
+              "type": "boolean"
+            },
+            "disable_side_quests_notifications": {
+              "type": "boolean"
+            },
+            "change_vehicles_logic": {
+              "type": "boolean"
+            },
+            "disable_player_inventory_encumbrance": {
+              "type": "boolean"
+            },
+            "player_extended_customization": {
+              "type": "boolean"
+            },
+            "disable_time_skip": {
+              "type": "boolean"
+            },
+            "disable_turrets": {
+              "type": "boolean"
+            },
+            "disable_surveillance_cameras": {
+              "type": "boolean"
+            },
+            "disable_vending_machines": {
+              "type": "boolean"
+            },
+            "disable_generic_devices": {
+              "type": "boolean"
+            },
+            "disable_no_combat": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
     }
   },
   "additionalProperties": true,
