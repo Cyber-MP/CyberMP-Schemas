@@ -32,6 +32,11 @@
       "description": "Whether to disable the built-in Voice over IP server.",
       "default": false
     },
+    "ep2_dlc_enabled": {
+      "type": "boolean",
+      "description": "Whether to disable the phantom liberty dlc",
+      "default": false
+    },
     "connection_host_addr": {
       "type": "string",
       "format": "uri",
