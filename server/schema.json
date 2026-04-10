@@ -53,6 +53,9 @@
         "nametags": {
           "type": "boolean"
         },
+        "death_autostand": {
+          "type": "boolean"
+        },
         "disable_switch_seats": {
           "type": "boolean"
         },
