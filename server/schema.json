@@ -46,6 +46,10 @@
       "type": "string",
       "description": "Servers's private token that is used to identify servers in server list"
     },
+    "cef_debug": {
+      "type": "string",
+      "description": "Wether to enable cef debugging globally or not"
+    },
     "core": {
       "type": "object",
       "description": "Core gameplay and engine configurations.",
