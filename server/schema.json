@@ -47,7 +47,7 @@
       "description": "Servers's private token that is used to identify servers in server list"
     },
     "cef_debug": {
-      "type": "string",
+      "type": "boolean",
       "description": "Wether to enable cef debugging globally or not"
     },
     "core": {
