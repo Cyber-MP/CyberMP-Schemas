@@ -27,7 +27,7 @@
       },
       "uniqueItems": true
     },
-    "disable_VoIP_server": {
+    "disable_voice": {
       "type": "boolean",
       "description": "Whether to disable the built-in Voice over IP server.",
       "default": false
