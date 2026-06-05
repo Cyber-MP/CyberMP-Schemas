@@ -45,7 +45,8 @@
       ],
       "description": "Path to scripts shared by both client and server."
     },
-    "ui_page": {
+    "cef_url": {
+      
       "type": "string",
       "description": "The main entry point for the UI/CEF."
     },
