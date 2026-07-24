@@ -42,7 +42,7 @@
       "format": "uri",
       "description": "Public server address that would be used to connect via server list"
     },
-    "secret_token": {
+    "private_token": {
       "type": "string",
       "description": "Servers's private token that is used to identify servers in server list"
     },
