@@ -46,7 +46,6 @@
       "description": "Path to scripts shared by both client and server."
     },
     "cef_url": {
-      
       "type": "string",
       "description": "The main entry point for the UI/CEF."
     },
@@ -65,12 +64,8 @@
       "description": "Additional files to be included in the resource."
     },
     "use_game_natives": {
-      "type": "string",
-      "enum": [
-        "true",
-        "false"
-      ],
-      "description": "Note: This is a string 'true'/'false' based on your TOML."
+      "type": "boolean",
+      "description": "Enables/Disables usage of game natives in this resource"
     }
   },
   "additionalProperties": true
