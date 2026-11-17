@@ -34,7 +34,7 @@
     },
     "ep2_dlc_enabled": {
       "type": "boolean",
-      "description": "Whether to disable the phantom liberty dlc",
+      "description": "Whether to enable content from the Phantom Liberty DLC.",
       "default": false
     },
     "connection_host_addr": {
@@ -44,39 +44,62 @@
     },
     "private_token": {
       "type": "string",
-      "description": "Servers's private token that is used to identify servers in server list"
+      "description": "Server's private token, used to identify the server in the server list."
     },
     "cef_debug": {
       "type": "boolean",
-      "description": "Wether to enable cef debugging globally or not"
+      "description": "Whether to enable CEF remote debugging (port 9222) for every resource.",
+      "default": false
+    },
+    "duplicatePlayers": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Maximum number of connections allowed from a single IP address."
+    },
+    "useCdn": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether clients download the packed resource files from a CDN instead of the server itself."
+    },
+    "cdnUrl": {
+      "type": "string",
+      "description": "Base URL of the CDN that hosts the packed resource files. Used when useCdn is true."
     },
     "core": {
       "type": "object",
       "description": "Core gameplay and engine configurations.",
       "properties": {
         "nametags": {
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Renders [ID] Nickname overhead markers within 8 meters."
         },
         "death_autostand": {
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Automatically plays stand-up animation if health regenerates above 0."
         },
         "disable_switch_seats": {
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Prevents players from switching seats while inside vehicles."
         },
         "delete_map_objects": {
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Removes vanilla map objects from the world."
         },
         "default_gameplay_restrictions": {
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Enforces standard multiplayer restrictions (disables Photo Mode, scanning, fast travel, and phone calls)."
         },
         "disable_drop_points": {
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Disables singleplayer drop point containers across Night City."
         },
         "disable_location_dependent_quests": {
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Automatically completes tracked vanilla journal quests to prevent narrative conflicts."
         },
         "disable_garage": {
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Prevents vanilla vehicle summoning from opening the singleplayer garage interface."
         },
         "files": {
           "type": "array",
@@ -90,37 +113,48 @@
           "description": "Specific logic and world overrides.",
           "properties": {
             "change_player_on_death_logic": {
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Overrides PlayerPuppet.OnDeath so server scripts control death and respawn handling."
             },
             "disable_side_quests_notifications": {
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Suppresses quest tracking popups and journal notifications on the client HUD."
             },
             "change_vehicles_logic": {
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Overrides vanilla vehicle summoning, vehicle hijacking, and mounting checks."
             },
             "disable_player_inventory_encumbrance": {
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Disables character movement slow-down when carrying excess weight."
             },
             "player_extended_customization": {
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Enables character mirror customization in NewGame edit mode."
             },
             "disable_time_skip": {
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Disables the wait/skip time menu."
             },
             "disable_turrets": {
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Disables hostile automated security turrets in the world."
             },
             "disable_surveillance_cameras": {
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Disables security surveillance camera devices."
             },
             "disable_vending_machines": {
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Disables interactive vending machines."
             },
             "disable_generic_devices": {
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Disables interactive doors, netrunner panels, and security lockers."
             },
             "disable_no_combat": {
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Removes peaceful \"No Combat\" zone restrictions across the city."
             }
           }
         }

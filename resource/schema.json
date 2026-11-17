@@ -65,7 +65,7 @@
     },
     "use_game_natives": {
       "type": "boolean",
-      "description": "Enables/Disables usage of game natives in this resource"
+      "description": "Whether the client scripts of this resource can call game natives through mp.game."
     }
   },
   "additionalProperties": true
