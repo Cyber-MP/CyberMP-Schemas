@@ -66,10 +66,6 @@
     "use_game_natives": {
       "type": "boolean",
       "description": "Whether the client scripts of this resource can call game natives through mp.game."
-    },
-    "hotreload": {
-      "type": "boolean",
-      "description": "Read by the official hotreload resource: when true, the resource is restarted each time one of its scripts changes. The server itself ignores this key."
     }
   },
   "additionalProperties": true
